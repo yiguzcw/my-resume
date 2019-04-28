@@ -7,30 +7,6 @@ const RouterList: any[] = [
   {
     component: () => import('../containers/Articles'),
     path: '/'
-  },
-  {
-    component: () => import('../containers/Articles'),
-    path: '/articles'
-  },
-  {
-    component: () => import('../containers/Article'),
-    path: '/article/:Id'
-  },
-  {
-    component: () => import('../components/Resume/Resume'),
-    path: '/resume'
-  },
-  {
-    component: () => import('../containers/Say'),
-    path: '/say'
-  },
-  {
-    component: () => import('../containers/TimeFile'),
-    path: '/time-file'
-  },
-  {
-    component: () => import('../containers/Collect'),
-    path: '/collect'
   }
 ]
 const RouterMap = () => (

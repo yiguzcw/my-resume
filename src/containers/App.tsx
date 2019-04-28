@@ -1,11 +1,10 @@
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 import App from '../components/App/App'
-import { IInfo } from '../components/Layout/Sidebar/Sidebar'
 import { REQUEST_ARTICLES, REQUEST_INFO } from '../constants'
 import { IPayload } from '../types'
 interface IInfoInterface {
-  info: IInfo
+  info: any
 }
 const mapStateToProps = ({ info }: IInfoInterface) => {
   return { info }
