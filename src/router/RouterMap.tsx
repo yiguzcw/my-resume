@@ -5,7 +5,7 @@ import App from '../containers/App'
 import loading from './loading'
 const RouterList: any[] = [
   {
-    component: () => import('../containers/Articles'),
+    component: () => import('../containers/Basicinfo'),
     path: '/'
   }
 ]

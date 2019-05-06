@@ -1,13 +1,13 @@
 import { connect } from 'react-redux'
-import Articles, { IArticle } from '../components/Articles/Articles'
+import Basicinfo, { IBasicinterface } from '../components/Basicinfo/Basicinfo'
 import { REQUEST_ARTICLES } from '../constants'
 import { IPayload } from '../types'
 
 interface IState {
-  articles: IArticles
+  articles: IBasics
 }
-interface IArticles {
-  articles: IArticle[]
+interface IBasics {
+  articles: IBasicinterface[]
   total: number
 }
 const mapStateToProps = (state: IState): object => ({
@@ -27,4 +27,4 @@ export const mapDispatchToProps = (dispatch: any) => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Articles)
+)(Basicinfo)

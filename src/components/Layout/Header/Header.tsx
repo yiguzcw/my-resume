@@ -36,7 +36,8 @@ const getEnter = (e: any) => {
 
 interface IProps {
   fetchArticle: (payload: object) => void,
-  headerMenu: any[]
+  headerMenu: any[],
+  isSmall:boolean
 }
 const HeaderDom = (props: IProps) => {
   const menu = (
@@ -61,7 +62,7 @@ const HeaderDom = (props: IProps) => {
         <Row>
           <Col md={24} lg={24} xl={24} xxl={24}>
             <div className="header-logo-wrp">
-              <img src="images/my-head-portrait.jpg"/>
+              <img src={process.env.PUBLIC_URL + "images/my-head-portrait.jpg"}/>
             </div>
             <div className="header-title-wrp">
               <Texty
@@ -112,7 +113,7 @@ const HeaderDom = (props: IProps) => {
                   </Link>
                 </div>
               ))}
-              <Dropdown overlay={menu} trigger={['click']}>
+              <Dropdown overlay={menu} trigger={['click']} className={props.isSmall ? "none" : ""}>
                 <Icon type="bars" className="menu-button" />
               </Dropdown>
             </div>
