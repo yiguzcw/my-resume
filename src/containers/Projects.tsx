@@ -1,5 +1,5 @@
 import { connect } from 'react-redux'
-import Basicinfo from '../components/Basicinfo/Basicinfo'
+import Projects from '../components/Projects/Projects'
 import { REQUEST_ARTICLES } from '../constants'
 import { IPayload } from '../types'
 
@@ -27,4 +27,4 @@ export const mapDispatchToProps = (dispatch: any) => ({
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Basicinfo)
+)(Projects)

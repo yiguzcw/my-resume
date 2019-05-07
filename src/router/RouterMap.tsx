@@ -5,8 +5,28 @@ import App from '../containers/App'
 import loading from './loading'
 const RouterList: any[] = [
   {
-    component: () => import('../containers/Basicinfo'),
+    component: () => import('../containers/Home'),
     path: '/'
+  },
+  {
+    component: () => import('../containers/Basicinfo'),
+    path: '/basic'
+  },
+  {
+    component: () => import('../containers/Skillinfo'),
+    path: '/skill'
+  },
+  {
+    component: () => import('../containers/Projects'),
+    path: '/projects'
+  },
+  {
+    component: () => import('../containers/Experience'),
+    path: '/experience'
+  },
+  {
+    component: () => import('../containers/Evaluation'),
+    path: '/self-evaluation'
   }
 ]
 const RouterMap = () => (
