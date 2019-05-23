@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 import Skillinfo from '../components/Skillinfo/Skillinfo'
-import { REQUEST_ARTICLES } from '../constants'
+import { IS_SMALL_SCREEN } from '../actionTypes'
 import { IPayload } from '../types'
 
 interface IState {
@@ -11,15 +11,14 @@ interface IBasics {
   total: number
 }
 const mapStateToProps = (state: IState): object => ({
-  articles: state.articles.articles,
-  total: state.articles.total
+
 })
 
 export const mapDispatchToProps = (dispatch: any) => ({
   fetchArticle: (payload: IPayload) => {
     dispatch({
       payload,
-      type: REQUEST_ARTICLES
+      type: IS_SMALL_SCREEN
     })
   }
 })

@@ -7,8 +7,11 @@
     ]
   },
   "rules": {
+    "object-literal-sort-keys": false,
     "jsx-no-lambda":false,
     "no-console": false,
+    "prefer-const": false,
+    "no-debugger": false,
     "ordered-imports": false
   }
 }

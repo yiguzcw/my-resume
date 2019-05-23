@@ -35,7 +35,6 @@ const getEnter = (e: any) => {
 }
 
 interface IProps {
-  fetchArticle: (payload: object) => void,
   headerMenu: any[],
   isSmall:boolean
 }
@@ -100,7 +99,7 @@ const HeaderDom = (props: IProps) => {
                 Daniel's resume
               </Texty>
             </div>
-            <div className="header-menu-wrp">
+            <div className={props.isSmall ? "none header-menu-wrp" : "header-menu-wrp"}>
               {props.headerMenu.map(item => (
                 <div key={item.title} className="header-title-item">
                   <Link to={item.url}>
@@ -113,7 +112,7 @@ const HeaderDom = (props: IProps) => {
                   </Link>
                 </div>
               ))}
-              <Dropdown overlay={menu} trigger={['click']} className={props.isSmall ? "none" : ""}>
+              <Dropdown overlay={menu} trigger={['click']} className={props.isSmall ? "" : "none"}>
                 <Icon type="bars" className="menu-button" />
               </Dropdown>
             </div>

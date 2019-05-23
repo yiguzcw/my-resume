@@ -1,14 +1,14 @@
 import { call, put, takeEvery } from 'redux-saga/effects'
-import { ArticlesAction } from '../actions'
-import { RECEIVE_ARTICLES, REQUEST_ARTICLES } from '../constants'
+import { IActionInterface } from '../actions'
+import { IS_SMALL_SCREEN } from '../actionTypes'
 import { fetchArticles } from '../services'
 
-function* yieldArticles(action: ArticlesAction) {
+function* yieldArticles(action: IActionInterface) {
   const { payload } = action
   const response = yield call(fetchArticles, payload)
   const { articles, total } = response
-  yield put({ type: RECEIVE_ARTICLES, articles, total })
+  yield put({ type: IS_SMALL_SCREEN, articles, total })
 }
 export function* watchYieldArticles() {
-  yield takeEvery(REQUEST_ARTICLES, yieldArticles)
+  yield takeEvery(IS_SMALL_SCREEN, yieldArticles)
 }
