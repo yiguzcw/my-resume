@@ -1,27 +1,28 @@
 import { connect } from 'react-redux'
 import Basicinfo from '../components/Basicinfo/Basicinfo'
-import { IS_SMALL_SCREEN } from '../actionTypes'
-import { IPayload } from '../types'
+import { GET_BASIC_INFO } from '../actionTypes'
 
-interface IBasics {
-  logoImg: any,
-  basicinfo: IBasicInfo,
-  container: string,
-}
-interface IBasicInfo {
-  img: any
-  title: string
-}
-const mapStateToProps = (state: IBasics): object => ({
-
+const mapStateToProps = (state: any): object => ({
+  my_pic: state.basicInfo.my_pic,
+  tags: state.basicInfo.tags,
+  mySelf:state.basicInfo.mySelf,
+  motto:state.basicInfo.motto
 })
 
 export const mapDispatchToProps = (dispatch: any) => ({
-  fetchArticle: (payload: IPayload) => {
-    dispatch({
-      payload,
-      type: IS_SMALL_SCREEN
-    })
+  getBasicData(){
+    let result = fetch('/jsons/basic.json', {
+      credentials: 'include', 
+      headers: { 'Accept': 'application/json, text/plain, */*' } 
+    });
+    result.then(res => {
+      return res.json()        // 将数据转换成json格式                
+    }).then(data => {
+      dispatch({
+        type: GET_BASIC_INFO,
+        payload: data
+      })
+    }).catch(e=>{console.log("error")})
   }
 })
 

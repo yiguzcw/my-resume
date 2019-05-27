@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux'
 import homeState from './App'
-// import Basicinfo from './Basicinfo'
+import basicInfo from './Basicinfo'
 const reducer = combineReducers({
-  // Basicinfo,
-  homeState
+  homeState,
+  basicInfo
 })
 export default reducer
