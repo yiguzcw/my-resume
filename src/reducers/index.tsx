@@ -1,8 +1,10 @@
 import { combineReducers } from 'redux'
 import homeState from './App'
-import basicInfo from './Basicinfo'
+import basicInfo from './BasicInfo'
+import skillState from './SkillInfo'
 const reducer = combineReducers({
   homeState,
-  basicInfo
+  basicInfo,
+  skillState
 })
 export default reducer

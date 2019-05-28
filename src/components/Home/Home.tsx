@@ -24,16 +24,12 @@ class Home extends React.Component<IHome> {
   public render() {
     return (
       <div className="my-card">
-        <div className="container cardetail">
-          <Row className="my-items">
-            <Col md={24} lg={8} xl={8} xxl={8} className="col-md-8 col-sm-12 col-xs-12 item">
-              <div className="reveal">
-                  <span className="circleLight" />
-                  <div className="facade" dangerouslySetInnerHTML={{__html: this.state.pageData}} />
-              </div>
-            </Col>
-          </Row>
-        </div>
+        <Row className="my-items cardetail">
+          <Col sm={24} md={24} lg={24} xl={24} xxl={24} className="reveal">
+            <span className="circleLight" />
+            <div className="facade" dangerouslySetInnerHTML={{__html: this.state.pageData}} />
+          </Col>
+        </Row>
       </div>
     )
   }
