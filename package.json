@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@types/echarts": "^4.1.9",
     "antd": "^3.6.6",
+    "echarts": "^4.2.1",
+    "echarts-for-react": "^2.0.15-beta.0",
     "es6-promise": "^4.2.6",
     "rc-queue-anim": "^1.6.5",
     "rc-texty": "^0.1.1",
