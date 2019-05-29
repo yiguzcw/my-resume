@@ -1,25 +1,24 @@
 import { connect } from 'react-redux'
 import Projects from '../components/Projects/Projects'
-import { IS_SMALL_SCREEN } from '../actionTypes'
-import { IPayload } from '../types'
-
-interface IState {
-  articles: IBasics
-}
-interface IBasics {
-  articles: any
-  total: number
-}
-const mapStateToProps = (state: IState): object => ({
-
+import { GET_PROJECT_DATA } from '../actionTypes'
+const mapStateToProps = (state: any): object => ({
+  projects: state.projectState.projects,
 })
 
 export const mapDispatchToProps = (dispatch: any) => ({
-  fetchArticle: (payload: IPayload) => {
-    dispatch({
-      payload,
-      type: IS_SMALL_SCREEN
-    })
+  getProjectsData(){
+    let result = fetch('/jsons/projects.json', {
+      credentials: 'include', 
+      headers: { 'Accept': 'application/json, text/plain, */*' } 
+    });
+    result.then(res => {
+      return res.json()        // 将数据转换成json格式                
+    }).then(data => {
+      dispatch({
+        type: GET_PROJECT_DATA,
+        payload: data
+      })
+    }).catch(e=>{console.log("error")})
   }
 })
 

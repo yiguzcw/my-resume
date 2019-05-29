@@ -1,0 +1,47 @@
+{
+    "projects": [
+        {   
+            "id": 1,
+            "name": "华兴财富",
+            "title": "华兴财富p2p网页",
+            "technique": "技术：HTML+Css+Js+jQuery",
+            "imgbg": "images/projects/project_bg1.jpg",
+            "hyperlink": "projects/p2p/index.html"
+        },{   
+            "id": 2,
+            "name": "华兴财富",
+            "title": "华兴财富p2p网页",
+            "technique": "技术：HTML+Css+Js+jQuery",
+            "imgbg": "images/projects/project_bg1.jpg",
+            "hyperlink": "projects/p2p/index.html"
+        },{   
+            "id": 3,
+            "name": "华兴财富",
+            "title": "华兴财富p2p网页",
+            "technique": "技术：HTML+Css+Js+jQuery",
+            "imgbg": "images/projects/project_bg1.jpg",
+            "hyperlink": "projects/p2p/index.html"
+        },{   
+            "id": 4,
+            "name": "华兴财富",
+            "title": "华兴财富p2p网页",
+            "technique": "技术：HTML+Css+Js+jQuery",
+            "imgbg": "images/projects/project_bg1.jpg",
+            "hyperlink": "projects/p2p/index.html"
+        },{   
+            "id": 5,
+            "name": "华兴财富",
+            "title": "华兴财富p2p网页",
+            "technique": "技术：HTML+Css+Js+jQuery",
+            "imgbg": "images/projects/project_bg1.jpg",
+            "hyperlink": "projects/p2p/index.html"
+        },{   
+            "id": 6,
+            "name": "华兴财富",
+            "title": "华兴财富p2p网页",
+            "technique": "技术：HTML+Css+Js+jQuery",
+            "imgbg": "images/projects/project_bg1.jpg",
+            "hyperlink": "projects/p2p/index.html"
+        }
+    ]
+}

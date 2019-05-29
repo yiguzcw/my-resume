@@ -15,7 +15,7 @@ class Skillinfo extends React.Component<ISkills> {
     }
     public getOption() {
         return {
-            title: { text: '我的技能成长' },
+            title: { text: '掌握前端前沿技术' },
             tooltip : {
                 trigger: 'axis'
             },
