@@ -15,9 +15,53 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      color: #000;
+      -webkit-transition: box-shadow 0.5s;
+      transition: box-shadow 0.5s;
+      overflow: hidden;
+      border-radius: 10px;
+      -webkit-transform: scale(1.03);
+      transform: scale(1.03);
+      box-sizing: border-box;
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
       .facade{
         position: absolute;
-        z-index: 100
+        text-align: center;
+        z-index: 100;
+        color: #000;
+        display: flex;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        background-position: center;
+        background-attachment: fixed;
+        h2{
+          text-align: center;
+          font-family: "myFirstFont", "微软雅黑", "宋体";
+          white-space: nowrap;
+          font-size: 70px;
+          color: #000;
+          user-select: none;
+        }
+        strong {
+          font-size: 25px;
+          color: #000;
+          user-select: none;
+        }
+        p {
+          font-family: "微软雅黑";
+          font-size: 20px;
+          margin-top: 8px;
+          color: #000;
+          letter-spacing: 2px;
+          user-select: none;
+        }
+        p.my-Email {
+          color: #7d2704;
+        }
       }
     }
   }

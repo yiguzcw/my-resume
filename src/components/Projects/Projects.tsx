@@ -17,20 +17,22 @@ class Projects extends React.Component<IProjects> {
             <Row className="portfolio-items">
                 {
                     this.props.projects.map((project:any)=>{
-                        <Col className="webItem active">
-                            <div className="hover-bg">
-                                <a href={project.hyperlink} title={project.name}>
-                                    <div className="hover-text">
-                                        <h4>{project.title}</h4>
-                                        <small>{project.technique}</small>
-                                        <br />
-                                        <strong>点击查看</strong>
-                                        <i className="fa fa-search"/>
-                                    </div>
-                                    <img className="imgbg" src={project.imgbg} alt={project.name}/>
-                                </a>
-                            </div>
-                        </Col>
+                        return(
+                            <Col key={project.id} className="webItem active">
+                                <div className="hover-bg">
+                                    <a href={project.hyperlink} title={project.name}>
+                                        <div className="hover-text">
+                                            <h4>{project.title}</h4>
+                                            <small>{project.technique}</small>
+                                            <br />
+                                            <strong>点击查看</strong>
+                                            <i className="fa fa-search"/>
+                                        </div>
+                                        <img className="imgbg" src={project.imgbg} alt={project.name}/>
+                                    </a>
+                                </div>
+                            </Col>
+                        )
                     })
                 }
             </Row>

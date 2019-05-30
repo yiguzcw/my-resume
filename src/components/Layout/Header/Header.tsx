@@ -60,9 +60,9 @@ const HeaderDom = (props: IProps) => {
       <Header>
         <Row>
           <Col md={24} lg={24} xl={24} xxl={24}>
-            <div className="header-logo-wrp">
+            <Link to='/' className="header-logo-wrp">
               <img src={process.env.PUBLIC_URL + "images/my-head-portrait.jpg"}/>
-            </div>
+            </Link>
             <div className="header-title-wrp">
               <Texty
                 className="title"
