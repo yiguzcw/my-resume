@@ -1,3 +1,4 @@
 export const IS_SMALL_SCREEN = 'IS_SMALL_SCREEN'
 export const GET_BASIC_INFO = 'GET_BASIC_INFO'
 export const GET_PROJECT_DATA = 'GET_PROJECT_DATA'
+export const CHANGE_BG_IMGS = 'CHANGE_BG_IMGS'

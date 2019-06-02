@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 import App from '../components/App/App'
-import { IS_SMALL_SCREEN } from '../actionTypes'
+import { IS_SMALL_SCREEN, CHANGE_BG_IMGS } from '../actionTypes'
 
 const mapStateToProps = (state:any) => {
   return {
@@ -19,6 +19,22 @@ export const mapDispatchToProps = (dispatch: any) => {
       dispatch({
         type: IS_SMALL_SCREEN,
         payload: isSmallScreen
+      })
+    },
+    bgImgsChange(louter:any){
+      let bgImgs
+      debugger
+      if(louter === "/"){
+        bgImgs = [
+          "images/page1_link_bg1.jpg",
+          "images/page1_link_bg2.jpg",
+          "images/page1_link_bg3.jpg",
+          "images/page1_link_bg4.jpg",
+        ]
+      }
+      dispatch({
+        type: CHANGE_BG_IMGS,
+        payload: bgImgs
       })
     }
   }
