@@ -6,8 +6,6 @@ interface IBgProps {
   imgs: any[]
 }
 const Bgcompone = (props:IBgProps) => {
-  debugger
-  console.log("背景轮播",props.imgs)
   return (
     <Carousel autoplay={true} effect="fade" className="imgBox" >
       {

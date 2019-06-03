@@ -14,7 +14,7 @@ interface IProps {
   headerMenu: any[],
   isSmallScreen: boolean,
   shufflingImgs: any[],
-  match:any,
+  location:any,
   screenOpinion: (payload?: object) => void,
   bgImgsChange: (payload?: object) => void
 }
@@ -25,7 +25,7 @@ class App extends React.Component<IProps> {
   }
   public componentWillMount(){
     this.props.screenOpinion()
-    this.props.bgImgsChange(this.props.match.path)
+    this.props.bgImgsChange(this.props.location.pathname)
   }
   public render() {
     const { children } = this.props

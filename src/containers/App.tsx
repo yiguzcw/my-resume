@@ -23,13 +23,32 @@ export const mapDispatchToProps = (dispatch: any) => {
     },
     bgImgsChange(louter:any){
       let bgImgs
-      debugger
       if(louter === "/"){
         bgImgs = [
           "images/page1_link_bg1.jpg",
           "images/page1_link_bg2.jpg",
           "images/page1_link_bg3.jpg",
           "images/page1_link_bg4.jpg",
+        ]
+      }else if(louter === "/basic"){
+        bgImgs = [
+          "images/myInfo_bg_pic.jpg"
+        ]
+      }else if(louter === "/skill"){
+        bgImgs = [
+          "images/my_skill_bg.jpg"
+        ]
+      }else if(louter === "/projects"){
+        bgImgs = [
+          "images/portfolio_bg.jpg"
+        ]
+      }else if(louter === "/experience"){
+        bgImgs = [
+          "images/my_work-exp_bg.jpg"
+        ]
+      }else if(louter === "/self-evaluation"){
+        bgImgs = [
+          "images/sejf-eval_bg.jpg"
         ]
       }
       dispatch({

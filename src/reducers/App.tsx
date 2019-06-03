@@ -20,7 +20,6 @@ const homeState = (state: object = defaultStatus, action: IActionInterface): obj
       newState.isSmallScreen = action.payload
       return newState
     case CHANGE_BG_IMGS:
-      debugger
       let newStates = JSON.parse(JSON.stringify(state));
       newStates.shufflingImgs = action.payload
       return newStates

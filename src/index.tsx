@@ -5,6 +5,7 @@ import * as ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import { applyMiddleware, createStore } from 'redux'
 import createSagaMiddleware from 'redux-saga'
+import "animate.css";
 import './index.less'
 import reducer from './reducers'
 import RouterMap from './router/RouterMap'

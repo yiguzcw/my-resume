@@ -1,14 +1,17 @@
 import * as React  from 'react'
 import { Col, Row } from 'antd'
+import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 import './style.less'
 import 'whatwg-fetch'
 import 'es6-promise'
 interface IHome {
   pageData: string,
+  interval: any
 }
 class Home extends React.Component<IHome> {
   public state = {
-    pageData: ""
+    pageData: "",
+    interval: null
   }
   public componentWillMount(){
     let result = fetch('/jsons/home.json', {
@@ -20,6 +23,10 @@ class Home extends React.Component<IHome> {
     }).then(data => {
       this.setState({pageData:data.content})
     }).catch(e=>{console.log("error")})
+    this.interval = setInterval(this.tick, 2000);
+  }
+  componentWillUnmount: function() {
+      clearInterval(this.interval);
   }
   public render() {
     return (
@@ -29,6 +36,17 @@ class Home extends React.Component<IHome> {
             <span className="circleLight" />
             <div className="facade" dangerouslySetInnerHTML={{__html: this.state.pageData}} />
           </Col>
+          <ReactCSSTransitionGroup
+            transitionEnter={true}
+            transitionLeave={true}
+            transitionEnterTimeout={2500}
+            transitionLeaveTimeout={1500}
+            transitionName="animated"
+          >
+            <div key="next-page" className="next-page animated fadeInLeftBig" >
+                <img src="/images/arrowdown.png" alt="" />
+            </div>
+          </ReactCSSTransitionGroup>
         </Row>
       </div>
     )

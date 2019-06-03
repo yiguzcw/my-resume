@@ -4,7 +4,6 @@
   position: absolute;
   top: 0;
   left: 0;
-  background-color: rgba(218, 218, 234, 0.35);
   z-index: 10;
   .cardetail{
     width: 100%;
@@ -93,6 +92,39 @@
         box-shadow: 0 0 70px #111;
         transform: scale(1.03) translate(-2px,-3px) rotateX(-3deg) rotateY(2deg) ;
       }
+    }
+    .next-page {
+      position: absolute;
+      margin-left: -35px;
+      left: 50%;
+      bottom: 10%;
+      border: 2px solid rgba(255,255,255,.2);
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      z-index: 100;
+      animation: fadeInUp 2s ease ;
+      -webkit-animation: fadeInUp 2s ease ;
+      line-height: 80px;
+      text-align: center;
+      cursor: pointer;
+      overflow: hidden;
+      background: rgba(0,0,0,.2);
+      transition: 1s all ease;
+      -webkit-transition: 1s all ease;
+      color: yellowgreen;
+      animation: fadeInUp 2s ease ;
+      -webkit-animation: fadeInUp 2s ease ;
+    }
+    .next-page:hover{
+      background: rgba(51,51,51,1);
+    }
+    .next-page span {
+      width: 30px;
+      height: 30px;
+      background: url("/images/arrowdown.png");
+      animation: nextPage 2s linear infinite;
+      -webkit-animation: nextPage 2s linear infinite;
     }
   }
 }
