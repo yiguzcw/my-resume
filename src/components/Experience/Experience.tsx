@@ -24,13 +24,12 @@ class Experience extends React.Component<IExperiences> {
         result.then(res => {
             return res.json()        // 将数据转换成json格式                
         }).then(data => {
-            debugger
             this.setState({experiences:data.experiences})
         }).catch(e=>{console.log("error")})
     }
     public render() {
     return (
-      <div className="container">
+      <div className="container experienceBox">
         <div className="finger-top hidden-xs">
             <img src="images/little_finger_bg1.png" />
         </div>

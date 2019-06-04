@@ -15,7 +15,7 @@ class Basicinfo extends React.Component<IBasics> {
     public render() {
         console.log("基础信息入参",this.props)  
         return (
-            <div className="container">
+            <div className="container myInfo">
                 <Row>
                     <Col className="col-md-8 col-sm-12 information">
                         <div className="my_pic">
@@ -25,7 +25,7 @@ class Basicinfo extends React.Component<IBasics> {
                             {
                                 this.props.tags.map((item)=>{
                                     return (
-                                        <Col key={item.value} className="col-xs-3">
+                                        <Col key={item.value} className="imgCol" xl={6} md={12} sm={24}>
                                             <div className="img">
                                                 <img src={item.img} alt=""/>
                                             </div>
@@ -36,9 +36,9 @@ class Basicinfo extends React.Component<IBasics> {
                                     )
                                 }) 
                             }
+                        <Col><p>{this.props.mySelf}</p></Col>
+                        <Col><p>{this.props.motto}</p></Col>
                         </Row>
-                        <p>{this.props.mySelf}</p>
-                        <p>{this.props.motto}</p>
                     </Col>
                 </Row>
             </div>

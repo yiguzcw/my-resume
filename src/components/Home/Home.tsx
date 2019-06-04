@@ -1,18 +1,17 @@
 import * as React  from 'react'
 import { Col, Row } from 'antd'
-import ReactCSSTransitionGroup from "react-addons-css-transition-group";
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import './style.less'
 import 'whatwg-fetch'
 import 'es6-promise'
 interface IHome {
-  pageData: string,
-  interval: any
+  pageData: string
 }
 class Home extends React.Component<IHome> {
   public state = {
     pageData: "",
-    interval: null
   }
+  public interval:any = null
   public componentWillMount(){
     let result = fetch('/jsons/home.json', {
       credentials: 'include', 
@@ -23,10 +22,10 @@ class Home extends React.Component<IHome> {
     }).then(data => {
       this.setState({pageData:data.content})
     }).catch(e=>{console.log("error")})
-    this.interval = setInterval(this.tick, 2000);
+    this.interval = setInterval(()=>{"abc"}, 2000);
   }
-  componentWillUnmount: function() {
-      clearInterval(this.interval);
+  public componentWillUnmount() {
+      clearInterval(this.interval)
   }
   public render() {
     return (
@@ -43,8 +42,8 @@ class Home extends React.Component<IHome> {
             transitionLeaveTimeout={1500}
             transitionName="animated"
           >
-            <div key="next-page" className="next-page animated fadeInLeftBig" >
-                <img src="/images/arrowdown.png" alt="" />
+            <div key="next-page" className="next-page animated fadeInDownBig/" >
+              <span/>
             </div>
           </ReactCSSTransitionGroup>
         </Row>

@@ -1,24 +1,123 @@
-.my-card {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background-color: rgba(218, 218, 234, 0.35);
-  z-index: 10;
-  .circleLight {
-    top: 0;
-    left: 0;
-    opacity: 0;
-    content: '';
-    width: 100%;
-    height: 100%;
-    display: block;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
+.experienceBox{
+  h3.title{
+    width: 86px;
+    height: 86px;
+    font-size: 28px;
+    text-align: center;
+    color: #6bc30d;
     position: absolute;
-    border-radius: 10px;
-    background: -webkit-radial-gradient(circle at 80px 40px, #ffffff, rgba(0, 0, 0, 0));
-    background: radial-gradient(circle at 80px 40px, #ffffff, rgba(0, 0, 0, 0));
+    left: 0;
+    top: 60px;
+    border-radius: 50%;
+    border: 5px solid #d7d8d8;
+    cursor: pointer;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &:hover,&:focus{
+      animation: runn 0.5s linear;
+    }
+  }
+  .experienced{
+    padding-top: 85px;
+    .work-time{
+      height: 110px;
+      line-height:110px;
+      text-align: right;
+      animation: rotateInDownLeft 2s ease ;
+      -webkit-animation: rotateInDownLeft 2s ease ;
+      h5{
+        height: 110px;
+        line-height:110px;
+        padding-right: 35px;
+        font-size: 16px;
+        color: #fff;
+        border-right: 6px solid #d7d8d8;
+        background: url("/images/time_bg.png") no-repeat right center;
+      }
+    }
+    .company{
+      height: 110px;
+      text-align: left;
+      position: relative;
+      padding: 10px 0 0 10px;
+      animation: rotateInDownRight 2s ease ;
+      -webkit-animation: rotateInDownRight 2s ease ;
+      span {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        text-align: center;
+        border-radius: 50%;
+        background-color: #6bc30d;
+        position: absolute;
+        top: 40px;
+        left: -33px;
+        i{
+          position: absolute;
+          width: 20px;
+          height: 20px;
+          top: 5px;
+          left: 5px;
+          background: url("/images/trencher-cap.png") no-repeat center;
+        }
+      }
+      h5{
+        font-size: 18px;
+        color: #FFD200;
+        margin-bottom: 6px;
+        border: 1px solid #FFD200;
+        display: inline-block;
+        padding: 8px 10px;
+      }
+      p{
+        font-size: 14px;
+        color: #fff;
+      }
+      .post{
+        font-size: 12px;
+        color: #1296db;
+      }
+    }
+    li:hover{
+      .epx-icon{
+        background-color: #1296db;
+        transform: scale(1.08);
+        transition: all 0.5s;
+        i{
+          background: url("/images/trencher-cap-hover.png") no-repeat center;
+        }
+      }
+      .company{
+        h5{
+          font-weight: 700;
+        }
+      } 
+    }
+  }
+  .finger-top,.finger-bottom{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    img{
+      width: 100%;
+      display: block;
+      cursor: pointer;
+    }
+  }
+  .finger-top {
+    -webkit-transform-origin: top left;
+    transform-origin: top left;
+    -webkit-transform: rotate3d(0, 0, 1, 60deg);
+    transform: rotate3d(0, 0, 1, 60deg);
+    -webkit-animation: hinge 2s ease infinite;
+    animation: hinge 2s ease infinite;
+  }
+  .finger-bottom{
+    left: 0;
+    bottom: -10px;
   }
 }

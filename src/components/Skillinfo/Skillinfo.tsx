@@ -79,7 +79,7 @@ class Skillinfo extends React.Component<ISkills> {
             'legendselectchanged': this.onChartLegendselectchanged
         }
         return (
-            <div className="container skill-wepr">
+            <div className="container skillBox">
                 <ReactEcharts
                 option={this.getOption()}
                 notMerge={true}
