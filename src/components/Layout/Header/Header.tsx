@@ -112,10 +112,10 @@ const HeaderDom = (props: IProps) => {
                   </Link>
                 </div>
               ))}
-              <Dropdown overlay={menu} trigger={['click']} className={props.isSmall ? "" : "none"}>
-                <Icon type="bars" className="menu-button" />
-              </Dropdown>
             </div>
+            <Dropdown overlay={menu} trigger={['click']} className={props.isSmall ? "" : "none"}>
+              <Icon type="bars" className="menu-button" />
+            </Dropdown>
           </Col>
         </Row>
       </Header>

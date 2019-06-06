@@ -25,7 +25,7 @@ class Basicinfo extends React.Component<IBasics> {
                             {
                                 this.props.tags.map((item)=>{
                                     return (
-                                        <Col key={item.value} className="imgCol" xl={6} md={12} sm={24}>
+                                        <Col key={item.value} className="imgCol" xl={6} md={6} sm={12}>
                                             <div className="img">
                                                 <img src={item.img} alt=""/>
                                             </div>
@@ -36,8 +36,10 @@ class Basicinfo extends React.Component<IBasics> {
                                     )
                                 }) 
                             }
-                        <Col><p>{this.props.mySelf}</p></Col>
-                        <Col><p>{this.props.motto}</p></Col>
+                        <Col className="description">
+                            <p>{this.props.mySelf}</p>
+                            <p>{this.props.motto}</p>
+                        </Col>
                         </Row>
                     </Col>
                 </Row>

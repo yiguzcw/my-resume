@@ -1,5 +1,6 @@
 import * as React  from 'react'
 import { Col, Row } from 'antd'
+import { Link } from 'react-router-dom'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import './style.less'
 import 'whatwg-fetch'
@@ -42,9 +43,9 @@ class Home extends React.Component<IHome> {
             transitionLeaveTimeout={1500}
             transitionName="animated"
           >
-            <div key="next-page" className="next-page animated fadeInDownBig/" >
+            <Link to='/basic' key="next-page" className="next-page animated fadeInDownBig/" >
               <span/>
-            </div>
+            </Link>
           </ReactCSSTransitionGroup>
         </Row>
       </div>
